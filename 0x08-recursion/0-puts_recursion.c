@@ -1,10 +1,11 @@
-#include "main.h"
+ #include "main.h"
+
 /**
- * _puts_recursion - entry point
+ *_puts_recursion - entry point
  *
- * @s: prints a address of a string
+ *@s: pointer that has the address of the string to be printed
  *
- * Return: nothing
+ *Return: nothing
  */
 void _puts_recursion(char *s)
 {
