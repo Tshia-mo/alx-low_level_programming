@@ -5,7 +5,7 @@
  * main - entry point
  * @argv: input
  * @argc: input
- * Return: Success 0.
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
