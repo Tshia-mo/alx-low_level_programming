@@ -6,7 +6,7 @@
  * atoi is a function that converts a string into a function
  * @argv: input
  * @argc: input
- * Return: Success 0.
+ * Return: Success 1.
  */
 int main(int argc, char *argv[])
 {
