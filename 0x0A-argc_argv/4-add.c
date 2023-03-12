@@ -1,29 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+
 /**
- * main - Entry Point
- * @argc: arguments
- * @argv: array pointing to arguments
- * Return: 0
+ *main - entry point
+ *
+ *Description: Adds positive numbers
+ *
+ *@argc: amount of arguments passed through the program
+ *@argv: pointer that contains the arrays of the arguments
+ *
+ *Return: the sum of the numbers, if no number is passed then print 0, if a
+ *number has symbols that are not digit then print Error and return 1
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int i, j, sum = 0;
 
-	if (argc < 1)
-		return (0);
-
-	for (i = 1; i < argc; i++)
+	if (argc == 1)
 	{
-		if (!atoi(argv[i]))
-		{
-			printf("%s\n", "Error");
-			return (1);
-		}
-		sum += atoi(argv[i]);
+		printf("0\n");
 	}
-	printf("%d\n", sum);
-
+	else
+	{
+		for (i = 1; i < argc; i++)
+		{
+			for (j = 0; argv[i][j] != 0; j++)
+			{
+				if (argv[i][j] > 58 || argv[i][j] < 47)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum = sum + atoi(argv[i]);
+		}
+		printf("%d\n", sum);
+	}
 	return (0);
 }
