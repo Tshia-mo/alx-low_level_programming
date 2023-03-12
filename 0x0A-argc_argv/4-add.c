@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * main - entry point
- * @argv: input
- * @argc: input
+ * main - Entry Point
+ * @argc: arguments
+ * @argv: array pointing to arguments
  * Return: 0
  */
 int main(int argc, char *argv[])
