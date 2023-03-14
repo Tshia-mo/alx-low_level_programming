@@ -12,8 +12,8 @@ char *_strdup(char *str)
 	int i, end;
 	char *array;
 
-	if (str == NULL)
-		return (NULL);
+	if (str == 0)
+		return (0);
 
 	for (end = 0; end <= *str; end++)
 	{
@@ -25,7 +25,7 @@ char *_strdup(char *str)
 	for (i = 0; i < end; i++)
 		array[i] = str[i];
 
-	if (array == NULL)
-		return (NULL);
+	if (array == 0)
+		return (0);
 	return (array);
 }
