@@ -1,8 +1,6 @@
-#ifndef MAIN_H
-#define MAIN_H
-/**
- * object_like_macro.h - Entry point
- * SIZE: header file
- */
+#ifndef OBJECT_LIKE_MACRO_H
+#define OBJECT_LIKE_MACRO_H
+
 #define SIZE 1024
+
 #endif
