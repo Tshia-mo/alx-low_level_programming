@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 char *create_buffer(char *file);
+void close_file(int me);
 
 /**
  * main - Entry point
@@ -51,8 +52,27 @@ int main(int argc, char *argv[])
 	} while (rd > 0);
 
 	free(buffer);
+	close_file(from);
+	close_file(rd);
 
 	return (0);
+}
+
+/**
+ * close_file - Closes file
+ * @me: input
+ */
+void close_file(int me)
+{
+	int cl;
+
+	cl = close(me);
+
+	if (cl == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close me %d\n", me);
+		exit(100);
+	}
 }
 
 /**
